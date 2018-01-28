@@ -1,0 +1,473 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "net.rh"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "net.rh\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "C",            ID_CONNECT,             VIRTKEY, ALT, NOINVERT
+    "D",            ID_DRIVE,               VIRTKEY, ALT, NOINVERT
+    "O",            ID_OPTIONS,             VIRTKEY, ALT, NOINVERT
+    "R",            ID_REFRESH,             VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_SELECT,              VIRTKEY, NOINVERT
+    VK_F1,          ID_FULLPANE1,           VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_DRIVE1,              VIRTKEY, ALT, NOINVERT
+    VK_F10,         ID_MYMENU,              VIRTKEY, NOINVERT
+    VK_F2,          ID_FULLPANE2,           VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_DRIVE2,              VIRTKEY, ALT, NOINVERT
+    VK_F5,          ID_COPY,                VIRTKEY, NOINVERT
+    VK_F6,          ID_RENAME,              VIRTKEY, NOINVERT
+    VK_F8,          ID_ERASE,               VIRTKEY, NOINVERT
+    VK_RETURN,      ID_ZOOM,                VIRTKEY, ALT, NOINVERT
+    VK_SUBTRACT,    ID_UNSELECT,            VIRTKEY, NOINVERT
+    VK_TAB,         ID_CHPANE,              VIRTKEY, NOINVERT
+    "X",            ID_APP_EXIT,            VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "net.ico"
+IDI_ICON_COMP           ICON    DISCARDABLE     "icon_com.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    MENUITEM "m1",                          65535
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BITMAP256
+//
+
+IDB_DIB_ABOUT256        BITMAP256 DISCARDABLE   "About256.img"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_EXIT                BITMAP  DISCARDABLE     "Exit.bmp"
+IDB_ABOUT               BITMAP  DISCARDABLE     "About.bmp"
+IDB_DRIVE               BITMAP  DISCARDABLE     "drive.bmp"
+IDB_COPY                BITMAP  DISCARDABLE     "copy.bmp"
+IDB_MOVE                BITMAP  DISCARDABLE     "move.bmp"
+IDB_ERASE               BITMAP  DISCARDABLE     "erase.bmp"
+IDB_CONNECT             BITMAP  DISCARDABLE     "connect.bmp"
+IDB_OPTIONS             BITMAP  DISCARDABLE     "options.bmp"
+IDB_REMOVABLE           BITMAP  DISCARDABLE     "rembl.bmp"
+IDB_FIXED               BITMAP  DISCARDABLE     "fixed.bmp"
+IDB_REMOTE              BITMAP  DISCARDABLE     "remote.bmp"
+IDB_CDROM               BITMAP  DISCARDABLE     "cdrom.bmp"
+IDB_DIRECT              BITMAP  DISCARDABLE     "direct.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANE DIALOG DISCARDABLE  0, 0, 118, 81
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_DLG_DRIVE DIALOGEX 0, 0, 149, 95
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "Ошибка доступа"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "Устройство #: не читается",IDC_TXT_DRIVE,30,14,97,8,NOT 
+                    WS_GROUP
+    CTEXT           "Выберите другое устройство:",-1,12,39,105,8,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_ED_DRIVE,119,38,19,12,0,WS_EX_CLIENTEDGE
+    CONTROL         "&Ok",IDOK,"BorBtn",WS_TABSTOP | 0x1,53,65,43,25
+    ICON            "",IDC_MYICON,5,5,20,20,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+    CONTROL         "",-1,"Static",SS_ETCHEDHORZ,4,59,141,1
+END
+
+IDD_DLG_DRIVESEL DIALOGEX 0, 0, 141, 135
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LST_DRIVES,11,8,60,119,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "&Ok",IDOK,"BorBtn",WS_TABSTOP | 0x1,90,22,43,25
+    CONTROL         "&Cancel",IDCANCEL,"BorBtn",WS_TABSTOP,90,84,43,25
+    CONTROL         "",IDC_GRP_LST,"BorShade",WS_GROUP | 0x8006,3,2,77,130
+    CONTROL         "",IDC_GRP_BTN,"BorShade",WS_GROUP | 0x8006,82,2,55,130
+END
+
+IDD_DLG_SELECT DIALOGEX 0, 0, 159, 65
+STYLE DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_BORDER
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ED_MASK,10,38,83,12,ES_AUTOHSCROLL,WS_EX_CLIENTEDGE
+    CONTROL         "&Ok",IDOK,"BorBtn",WS_TABSTOP | 0x1,107,6,43,25
+    CONTROL         "&Cancel",IDCANCEL,"BorBtn",WS_TABSTOP,107,34,43,25
+    CONTROL         "",IDC_GRP_LST,"BorShade",WS_GROUP | 0x8006,3,2,96,61
+    CONTROL         "",IDC_GRP_BTN,"BorShade",WS_GROUP | 0x8006,101,2,54,61
+    CTEXT           "Select mask",IDC_TXT_MASK,14,17,74,8,NOT WS_GROUP
+END
+
+IDD_DLG_COPY DIALOG DISCARDABLE  0, 0, 344, 83
+STYLE DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ED_PATH,8,17,327,12,ES_AUTOHSCROLL
+    CONTROL         "&Ok",IDOK,"BorBtn",WS_TABSTOP | 0x1,59,55,43,25
+    CONTROL         "&Cancel",IDCANCEL,"BorBtn",WS_TABSTOP,241,55,43,25
+    CONTROL         "",IDC_GRP_GRP,"BorShade",WS_GROUP | 0x8006,3,2,337,49
+    LTEXT           "File "" to:",IDC_TXT_FILE,8,7,155,8,NOT WS_GROUP
+    CONTROL         "ProgressBar2",IDC_PROGR_BAR,"msctls_progress32",
+                    WS_TABSTOP,50,34,243,12
+END
+
+IDD_DLG_ERASE DIALOG DISCARDABLE  0, 0, 344, 83
+STYLE DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Ok",IDOK,"BorBtn",WS_TABSTOP | 0x1,59,55,43,25
+    CONTROL         "&Cancel",IDCANCEL,"BorBtn",WS_TABSTOP,241,55,43,25
+    CONTROL         "",IDC_GRP_GRP,"BorShade",WS_GROUP | 0x8006,3,2,337,49
+    CTEXT           "File "" to:",IDC_TXT_FILE,8,7,155,8,NOT WS_GROUP
+END
+
+IDD_DLG_REPLACE DIALOG DISCARDABLE  0, 0, 257, 100
+STYLE DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Предупреждение"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Text2",IDC_TXT_MSG,"BorStatic",WS_BORDER | WS_GROUP | 
+                    0x1,4,4,248,56
+    CONTROL         "Button4",IDNO,"BorBtn",WS_TABSTOP,35,69,43,25
+    CONTROL         "Button5",IDYES,"BorBtn",WS_TABSTOP,107,69,43,25
+    CONTROL         "&All",IDC_BTN_ALL,"BorBtn",WS_TABSTOP,179,69,43,25
+END
+
+IDD_DLG_PORTS DIALOG DISCARDABLE  0, 0, 210, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Порт"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "75",IDC_RAD_75,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,11,14,24,10
+    CONTROL         "110",IDC_RAD_110,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,26,28,10
+    CONTROL         "134.5",IDC_RAD_134_5,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,38,34,10
+    CONTROL         "150",IDC_RAD_150,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,50,28,10
+    CONTROL         "300",IDC_RAD_300,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,62,28,10
+    CONTROL         "600",IDC_RAD_600,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,74,28,10
+    CONTROL         "1200",IDC_RAD_1200,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,86,32,10
+    CONTROL         "1800",IDC_RAD_1800,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,98,32,10
+    CONTROL         "2400",IDC_RAD_2400,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,110,32,10
+    CONTROL         "4800",IDC_RAD_4800,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,35,123,32,10
+    CONTROL         "7200",IDC_RAD_7200,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,14,32,10
+    CONTROL         "9600",IDC_RAD_9600,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,26,32,10
+    CONTROL         "14400",IDC_RAD_14400,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,38,36,10
+    CONTROL         "19200",IDC_RAD_19200,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,50,36,10
+    CONTROL         "38400",IDC_RAD_38400,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,62,36,10
+    CONTROL         "56K",IDC_RAD_56K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,74,29,10
+    CONTROL         "57600",IDC_RAD_57600,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,86,36,10
+    CONTROL         "115200",IDC_RAD_115200,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,98,40,10
+    CONTROL         "128K",IDC_RAD_128K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,110,33,10
+    CONTROL         "COM&1",IDC_RAD_COM1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,121,56,36,10
+    CONTROL         "COM&2",IDC_RAD_COM2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,121,73,36,10
+    CONTROL         "COM&3",IDC_RAD_COM3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,161,56,36,10
+    CONTROL         "COM&4",IDC_RAD_COM4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,161,73,36,10
+    CONTROL         "1",IDC_RAD_B1,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,121,104,20,10
+    CONTROL         "1.5",IDC_RAD_B15,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,121,122,26,10
+    CONTROL         "2",IDC_RAD_B2,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,
+                    167,113,20,10
+    GROUPBOX        "Порты",IDC_STATIC,113,46,92,43
+    GROUPBOX        "Число стоповых битов",IDC_STATIC,113,93,91,43
+    GROUPBOX        "Скорость передачи",IDC_STATIC,5,3,94,133
+    ICON            IDI_ICON_COMP,IDC_STATIC,148,12,21,20
+END
+
+IDD_DLG_PROTOCOL DIALOG DISCARDABLE  0, 0, 210, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Протокол"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Использовать циклический код",IDC_CHECK_POLYNOM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,4,124,10
+    EDITTEXT        IDC_EDIT_REQ,103,28,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LAREP,103,45,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LAWAIT,103,62,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BROKEN,103,79,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BROKENSTOP,103,96,40,14,ES_AUTOHSCROLL
+    CONTROL         "CPS",IDC_CHECK_CPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,123,30,10
+    CONTROL         "Errors",IDC_CHECK_ERR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,123,34,10
+    LTEXT           "X^3+X+1",IDC_STATIC,135,6,30,8
+    GROUPBOX        "Тайм-ауты",IDC_STATIC,4,20,146,95
+    LTEXT           "Запрос соединения",IDC_STATIC,8,31,68,8
+    LTEXT           "Период повтора LetsActive",IDC_STATIC,8,48,91,8
+    LTEXT           "Время ожидания LetsActive",IDC_STATIC,8,65,94,8
+    LTEXT           "Разрыв связи",IDC_STATIC,8,82,49,8
+    LTEXT           "Исправление ошибки",IDC_STATIC,8,99,74,8
+    LTEXT           "Строка статуса:",IDC_STATIC,34,124,55,8
+END
+
+IDD_DLG_INFO DIALOG DISCARDABLE  0, 0, 210, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Аппаратные возможности"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,6,5,198,102
+    CONTROL         "COM&1",IDC_RAD_COM1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,18,123,36,12
+    CONTROL         "COM&2",IDC_RAD_COM2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,64,123,36,12
+    CONTROL         "COM&3",IDC_RAD_COM3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,110,123,36,12
+    CONTROL         "COM&4",IDC_RAD_COM4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,156,123,36,12
+    CONTROL         "",-1,"Static",SS_ETCHEDHORZ,3,115,204,1
+END
+
+IDD_DLG_CNCTPCK DIALOG DISCARDABLE  0, 0, 186, 61
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "CNCT Packets"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Static",IDC_REQVEST,20,10,43,8
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,67,37,50,14
+    LTEXT           "Static",IDC_OK,71,10,43,8
+    LTEXT           "Static",IDC_OK2,122,10,43,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 111
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_DLG_SELECT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 158
+    END
+
+    IDD_DLG_PORTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_DLG_PROTOCOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_DLG_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DLG_CNCTPCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "COM Link"
+    AFX_IDS_IDLEMESSAGE     "For exit press 'Alt+X'"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "COM Link\n\nCOM Link\nCOM Link Files (*.cl)\n.cl\nCOML.Document\nCOML Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ERR_NONE             "Нет ошибки"
+    ID_ERR_GENERIC          "Общая ошибка"
+    ID_ERR_READONLY         "Запись в файл открытый только для чтения"
+    ID_ERR_ENDOFFILE        "Неожиданный конец файла при чтении"
+    ID_ERR_WRITEONLY        "Чтение файла открытого только для записи"
+    ID_ERR_BADINDEX         "Не правильный объект"
+    ID_ERR_BADCLASS         "Чтение из файла другой версии объекта"
+    ID_ERR_BADSCHEMA        "Другая версия файла"
+    ID_ERR_UNKNOWN          "Неизвестная ошибка"
+    MY_NERR_BadEventNam      "Нарушена последовательность пакетов"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Реквизиты пакета COM Link\nРеквизиты"
+    ID_APP_EXIT             "Выход из COM Link\nВыход"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    MY_NERR_BadControlRecv   "Передача на удалённую станцию прервана"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    MY_NERR_DevNotRedirected "Связь прервана"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    MY_NERR_BadRecipient      "Получен ошибочный пакет"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DRIVE                "Выбор логического диска\nЛогический диск"
+    ID_COPY                 "Копирование файла, каталога или выделенной группы файлов\nКопирование"
+    ID_RENAME               "Переименование файла, каталога или выделенной группы файлов\nПереименование"
+    ID_ERASE                "Удаление файла, каталога или выделенной группы файлов\nУдаление"
+    ID_CONNECT              "Установление нуль-модемного соединения\nУстановить связь"
+    ID_OPTIONS              "Настройка параметров\nОпции"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
